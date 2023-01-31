@@ -7,12 +7,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 class TextGenerator:
-    def __init__(self, fonts_dir_path=os.path.join(os.path.dirname(__file__), 'fonts'), ex_font_dir_path=None,
+    def __init__(self, fonts_dir_path=os.path.join(os.path.dirname(__file__), 'fonts'),
                  font_size_ratio=(16, 128), font_same_ratio=0.5, font_scale_ratio=(0.9, 1.1), font_random_color_ratio=0.5,
                  space_ratio=(-0.1, 0.1), interval_ratio=(-0.3, 0.3), center_height_ratio=(0.4, 0.6)):
         self.font_path_list = glob.glob(os.path.join(fonts_dir_path, '**/*.*'), recursive=True)
-        if ex_font_dir_path is not None:
-            self.font_path_list.extend(glob.glob(os.path.join(ex_font_dir_path, '**/*.*'), recursive=True))
         self.font_size_ratio = font_size_ratio
         self.font_same_ratio = font_same_ratio
         self.font_random_color_ratio = font_random_color_ratio

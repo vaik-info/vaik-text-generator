@@ -34,7 +34,7 @@ import os
 from PIL import Image
 from vaik_text_generator.text_generator import TextGenerator
 
-text_generator = TextGenerator(ex_font_dir_path=os.path.expanduser('~/Desktop/font'),
+text_generator = TextGenerator(font_dir_path=os.path.expanduser('~/Desktop/font'),
                                font_size_ratio=(16, 128), font_same_ratio=0.5, font_scale_ratio=(0.9, 1.1), font_random_color_ratio=0.5,
                                space_ratio=(-0.1, 0.1), interval_ratio=(-0.3, 0.3), center_height_ratio=(0.4, 0.6))
 text_image = text_generator.write('aａアｱあゃキャ、亜唖|弌乘')
